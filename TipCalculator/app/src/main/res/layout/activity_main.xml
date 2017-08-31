@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="com.blacoss.tipcalculator.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bill"
+        android:textSize="24sp"/>
+
+    <EditText
+        android:id="@+id/billEditText"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:text="@string/tipPercent"
+        android:textSize="24sp"/>
+
+    <EditText
+        android:id="@+id/tipPercentEditText"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:text="@string/tipAmount"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/tipAmountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:text="@string/total"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/totalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp"/>
+
+    <Button
+        android:text="@string/calculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/calcButton"
+        android:layout_marginTop="20dp"
+        android:onClick="calculateClick" />
+
+</LinearLayout>
