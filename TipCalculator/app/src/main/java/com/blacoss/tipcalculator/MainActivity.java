@@ -10,7 +10,6 @@ import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity {
 
-
     private EditText billEditText;
     private EditText tipPercentEditText;
     private TextView tipAmountTextView;
@@ -34,15 +33,12 @@ public class MainActivity extends AppCompatActivity {
         String billStr = billEditText.getText().toString();
         String tipPercentStr = tipPercentEditText.getText().toString();
 
-        // Convert the text into an integer
+        // Convert the text into a float
         try {
-            float bill = Float.parseFloat(billStr);
-            float tipPercent = Float.parseFloat((tipPercentStr));
-            float tipAmount = bill * (tipPercent / 100);
-            float total = bill + tipAmount;
-            NumberFormat moneyFormat = NumberFormat.getCurrencyInstance();
-            String tipAmountStr = moneyFormat.format(tipAmount);
-            String totalStr = moneyFormat.format(total);
+            TipCalculatorModel tipCalculatorModel = new TipCalculatorModel(billStr, tipPercentStr);
+
+            String tipAmountStr = tipCalculatorModel.calculateTip();
+            String totalStr = tipCalculatorModel.calculateTotal();
 
             tipAmountTextView.setText(tipAmountStr);
             totalTextView.setText(totalStr);
